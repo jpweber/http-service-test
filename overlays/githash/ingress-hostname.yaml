@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: http-service-test
+spec:
+  rules:
+  - host: 502d0bd.supercomputerrobot.com
+    http:
+      paths:
+      - backend:
+          serviceName: http-service-test
+          servicePort: 8080
+        path: /

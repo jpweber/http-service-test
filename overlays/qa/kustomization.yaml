@@ -1,0 +1,8 @@
+bases:
+- ../../base
+namespace: qa
+commonLabels:
+  env: qa
+patches:
+- increase-replicas.yaml
+- memory-limit.yaml

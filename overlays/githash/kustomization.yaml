@@ -3,5 +3,11 @@ bases:
 namespace: githash-test
 commonLabels:
   env: sandbox
+  gitHash: 502d0bd
+imageTags:
+  - name: jpweber/http-service-test
+    newTag: 2.2.1
 patches:
 - increase-replicas.yaml
+- svc-selector.yaml
+- ingress-hostname.yaml

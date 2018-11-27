@@ -18,7 +18,7 @@ import (
 )
 
 const (
-	version = "v2.1.0"
+	version = "v2.2.1"
 )
 
 func genLoad2(w http.ResponseWriter) {

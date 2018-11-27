@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: http-service-example-v2
+spec:
+  template:
+    spec:
+      containers:
+        - name: http-server-test
+          resources:
+            limits:
+              memory: 1250Mi
+            requests:
+              memory: 1250Mi
