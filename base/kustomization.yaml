@@ -1,0 +1,10 @@
+resources:
+- svc.yaml
+- deploy.yaml
+- ingress.yaml
+
+namespace: dev
+commonLabels:
+  app: http-service-test
+  tier: backend
+  env: dev

@@ -1,0 +1,18 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+  name: http-service-test
+  labels:
+    app: http-service-test 
+spec:
+  rules:
+  - host: test.supercomputerrobot.com 
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: http-service-test 
+          servicePort: 8080

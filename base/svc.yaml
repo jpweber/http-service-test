@@ -1,0 +1,13 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: http-service-test
+  labels:
+    app: http-service-test
+    tier: backend1
+spec:
+  ports:
+  - port: 8080
+  selector:
+    app: http-service-example

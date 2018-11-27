@@ -1,0 +1,28 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: http-service-example-v2
+  labels:
+    gitHash: "123"
+spec:
+  replicas: 2
+  strategy:
+    rollingUpdate:
+      maxUnavailable: 1
+  template:
+    metadata:
+      labels:
+        app: http-service-test
+        version: "2"
+    spec:
+      containers:
+      - name: http-server-test
+        image: jpweber/http-service-test:2.2.0
+        resources:
+            requests:
+                memory: "128Mi"
+                cpu: "10m"
+            limits:
+                memory: "512Mi"
+                cpu: "1000m"

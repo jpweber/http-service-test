@@ -1,0 +1,7 @@
+bases:
+- ../../base
+namespace: prod
+commonLabels:
+  env: prod
+patches:
+- increase-replicas.yaml

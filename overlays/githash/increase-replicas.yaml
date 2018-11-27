@@ -1,0 +1,6 @@
+apiVersion: apps/v1 #api must match
+kind: Deployment #kind must match
+metadata:
+  name: http-service-example-v2 #names must match
+spec:
+  replicas: 10
